@@ -18,12 +18,13 @@ export default function CategoryDetails({ route }) {
         );
     };
 
-    console.log(route.params.params.productDetails)
 
     return (
-        <>
-            <ScrollView style={styles.container}>
-                <StatusBar barStyle="dark-content" backgroundColor={"#E9F7ED"} />
+        <SafeAreaView style={styles.container}>
+            <StatusBar barStyle="dark-content" backgroundColor="#1DAB451A" />
+
+
+            <ScrollView style={{ backgroundColor: "#fff" }}>
                 <ScreenHeader colors="#E9F7ED" icon={require('../assets/icon/heart.png')} />
 
                 <View>
@@ -147,18 +148,21 @@ export default function CategoryDetails({ route }) {
                     </LinearGradient>
                 </TouchableOpacity>
             </View>
-        </>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
+    wrapper: {
+        flex: 1,
+    },
     imgbgstyle: {
         width: width,
         height: height / 3
     },
     container: {
         flex: 1,
-        backgroundColor: "#fff"
+        backgroundColor: '#E9F7ED',
     },
     imagecontainer: {
         width: width,

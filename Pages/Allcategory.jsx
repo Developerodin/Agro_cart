@@ -21,6 +21,7 @@ export default function Allcategory() {
 
 const styles = StyleSheet.create({
     container: {
-        width: width
+        width: width,
+        backgroundColor:"#fff"
     }
 })

@@ -33,7 +33,7 @@ export default function Home() {
                     </TouchableOpacity>
                 </View>
 
-                <View style={Styles.marginTop2}>
+                <View style={[Styles.marginTop1,Styles.marginHorizontal1]}>
                     <Recentsearch />
                 </View>
 
@@ -45,7 +45,7 @@ export default function Home() {
                     <Banner />
                 </View>
 
-                <View style={Styles.marginTop2}>
+                <View style={[Styles.marginTop1,Styles.marginBottom4,Styles.marginHorizontal1]}>
                     <BestDeal />
                 </View>
             </ScrollView>

@@ -8,7 +8,6 @@ import { NavigationContainer } from '@react-navigation/native';
 export default function App() {
   return (
     <NavigationContainer>
-        <StatusBar style="auto" backgroundColor='#d9fce6' />
         <Route/>
     </NavigationContainer>
   );

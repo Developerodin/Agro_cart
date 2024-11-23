@@ -1,11 +1,11 @@
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View,StatusBar } from 'react-native'
 import React from 'react'
 import { Styles } from './Stylesheets'
 import { useNavigation } from '@react-navigation/native'
 
-export default function ScreenHeader({title,icon,colors}) {
+export default function ScreenHeader({ title, icon, colors }) {
 
-    const navigation=useNavigation();
+    const navigation = useNavigation();
 
     // console.log(colors)
 
@@ -17,16 +17,17 @@ export default function ScreenHeader({title,icon,colors}) {
                     Styles.Row,
                     Styles.justifyContent_between,
                     Styles.AlignItem_center,
-                    {backgroundColor:colors?colors:"#fff"}
+                    { backgroundColor: colors ? colors : "#fff" }
                 ]
             }>
-            <TouchableOpacity onPress={()=>{navigation.goBack()}}>
+
+            <TouchableOpacity onPress={() => { navigation.goBack() }}>
                 <Image source={require('../assets/black_back-arrow.png')} style={styles.backArrow} />
             </TouchableOpacity>
 
             <View>
                 <Text style={styles.headertxt}>
-                   {title}
+                    {title}
                 </Text>
             </View>
 
@@ -43,10 +44,12 @@ const styles = StyleSheet.create({
         height: 20,
     },
     header_container: {
-        marginTop: Platform.OS == "ios" ? 0 : 35,
+        marginTop: Platform.OS == "ios" ? 0 : 0,
         paddingHorizontal: 20,
-        backgroundColor:"#fff",
-        padding:15,
+        backgroundColor: "#fff",
+        padding: 15,
+        borderBottomRightRadius:15,
+        borderBottomLeftRadius:15
     },
     search_icon: {
         width: 30,

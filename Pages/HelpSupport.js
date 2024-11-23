@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, StyleSheet, Dimensions, Image,  TouchableOpacity, StatusBar, ScrollView } from 'react-native'
+import { View, Text, SafeAreaView, StyleSheet, Dimensions, Image, TouchableOpacity, StatusBar, ScrollView } from 'react-native'
 import React from 'react'
 import BackArrow from '../assets/icon/arrow-black.png'
 import IconFix from '../assets/icon/next_icon.png'
@@ -7,99 +7,101 @@ import Timer from '../assets/icon/timer.png'
 import CallG from '../assets/icon/call-g.png'
 import MailG from '../assets/icon/mail-g.png'
 import ScreenHeader from '../Components/ScreenHeader'
+import { Styles } from '../Components/Stylesheets'
 
 
 
-export default function HelpSupport({navigation}) {
-  return (
-    <>
-    <StatusBar style={"auto"} backgroundColor={"#fff"}/>
-    <ScrollView style={styles.container}>
-        <ScreenHeader title="Help & Support"/>
+export default function HelpSupport({ navigation }) {
+    return (
+        <SafeAreaView style={styles.container}>
+            <StatusBar style={"auto"} backgroundColor={"#fff"} />
 
-        <View>
-            <Text style={styles.inputHead}>Recent Tickets</Text>
-        </View>
+            <ScrollView style={{backgroundColor:"#1DAB451A"}}>
+                <ScreenHeader title="Help & Support" />
 
-        <View style={styles.menuContainer}>
-            <TouchableOpacity style={styles.menubtn} onPress={()=>{navigation.navigate("TicketDetails")}}>
-                <Text style={styles.name}>#1122334455</Text>
-                <Text style={styles.Detail}>Order #12345678</Text>
-                <Image source={Timer} style={styles.right}/>
-                <Image source={IconFix} style={styles.iconsleft}/>
-            </TouchableOpacity>
-        </View>
+                <View style={Styles.marginTop1}>
+                    <Text style={styles.inputHead}>Recent Tickets</Text>
+                </View>
 
-        <View style={styles.menuContainer}>
-            <TouchableOpacity style={styles.menubtn}>
-                <Text style={styles.name}>#1122334455</Text>
-                <Text style={styles.Detail}>Order #12345678</Text>
-                <Image source={Right} style={styles.right}/>
-                <Image source={IconFix} style={styles.iconsleft}/>
-            </TouchableOpacity>
-        </View>
+                <View style={styles.menuContainer}>
+                    <TouchableOpacity style={styles.menubtn} onPress={() => { navigation.navigate("TicketDetails") }}>
+                        <Text style={styles.name}>#1122334455</Text>
+                        <Text style={styles.Detail}>Order #12345678</Text>
+                        <Image source={Timer} style={styles.right} />
+                        <Image source={IconFix} style={styles.iconsleft} />
+                    </TouchableOpacity>
+                </View>
 
-        <View style={styles.menuContainer}>
-            <TouchableOpacity style={styles.menubtn}>
-                <Text style={styles.name}>#1122334455</Text>
-                <Text style={styles.Detail}>Bulk Order</Text>
-                <Image source={Right} style={styles.right}/>
-                <Image source={IconFix} style={styles.iconsleft}/>
-            </TouchableOpacity>
-        </View>
+                <View style={styles.menuContainer}>
+                    <TouchableOpacity style={styles.menubtn}>
+                        <Text style={styles.name}>#1122334455</Text>
+                        <Text style={styles.Detail}>Order #12345678</Text>
+                        <Image source={Right} style={styles.right} />
+                        <Image source={IconFix} style={styles.iconsleft} />
+                    </TouchableOpacity>
+                </View>
 
-        <View>
-            <Text  style={styles.inputHead2}>Get Help With</Text>
-        </View>
+                <View style={styles.menuContainer}>
+                    <TouchableOpacity style={styles.menubtn}>
+                        <Text style={styles.name}>#1122334455</Text>
+                        <Text style={styles.Detail}>Bulk Order</Text>
+                        <Image source={Right} style={styles.right} />
+                        <Image source={IconFix} style={styles.iconsleft} />
+                    </TouchableOpacity>
+                </View>
 
-        <View style={styles.menuContainer}>
-            <TouchableOpacity style={styles.menubtn}>
-                <Text style={styles.name}>Previous Orders</Text>
-                <Image source={IconFix} style={styles.iconsleft}/>
-            </TouchableOpacity>
-        </View>
+                <View>
+                    <Text style={styles.inputHead2}>Get Help With</Text>
+                </View>
 
-        <View style={styles.menuContainer}>
-            <TouchableOpacity style={styles.menubtn}>
-                <Text style={styles.name}>App Guide</Text>
-                <Image source={IconFix} style={styles.iconsleft}/>
-            </TouchableOpacity>
-        </View>
- 
- 
-        <View style={styles.menuContainer}>
-            <TouchableOpacity style={styles.menubtn} onPress={()=>{navigation.navigate("SupportRaise")}}>
-                <Text style={styles.name}>Raise A Support Ticket</Text>
-                <Image source={IconFix} style={styles.iconsleft}/>
-            </TouchableOpacity>
-        </View>
+                <View style={styles.menuContainer}>
+                    <TouchableOpacity style={styles.menubtn}>
+                        <Text style={styles.name}>Previous Orders</Text>
+                        <Image source={IconFix} style={styles.iconsleft} />
+                    </TouchableOpacity>
+                </View>
 
-        <View>
-            <Text  style={styles.inputHead2}>VIP Support</Text>
-        </View>
+                <View style={styles.menuContainer}>
+                    <TouchableOpacity style={styles.menubtn}>
+                        <Text style={styles.name}>App Guide</Text>
+                        <Image source={IconFix} style={styles.iconsleft} />
+                    </TouchableOpacity>
+                </View>
 
-        <View style={styles.bsnsBTN}>
-            <TouchableOpacity style={styles.back1}>
-                <Image source={MailG} style={styles.icon1st}/>
-                <Text style = {styles.loginText1} >Mail Us</Text> 
-            </TouchableOpacity>
 
-            <TouchableOpacity style={styles.back2}>
-                <Image source={CallG} style={styles.icon1st}/>
-                <Text style = {styles.loginText1} >Call Us</Text> 
-            </TouchableOpacity>
-        </View> 
-    </ScrollView>
-    </>
-  )
+                <View style={styles.menuContainer}>
+                    <TouchableOpacity style={styles.menubtn} onPress={() => { navigation.navigate("SupportRaise") }}>
+                        <Text style={styles.name}>Raise A Support Ticket</Text>
+                        <Image source={IconFix} style={styles.iconsleft} />
+                    </TouchableOpacity>
+                </View>
+
+                <View>
+                    <Text style={styles.inputHead2}>VIP Support</Text>
+                </View>
+
+                <View style={styles.bsnsBTN}>
+                    <TouchableOpacity style={styles.back1}>
+                        <Image source={MailG} style={styles.icon1st} />
+                        <Text style={styles.loginText1} >Mail Us</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.back2}>
+                        <Image source={CallG} style={styles.icon1st} />
+                        <Text style={styles.loginText1} >Call Us</Text>
+                    </TouchableOpacity>
+                </View>
+            </ScrollView>
+        </SafeAreaView>
+    )
 }
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#1DAB451A',
-        flex:1
+        backgroundColor: '#fff',
+        flex: 1
     },
-    
+
     header: {
         flexDirection: 'row',
         height: 70,
@@ -108,11 +110,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff', // Green background
         padding: 10,
     },
-    
+
     arrow: {
         marginLeft: 20
     },
-    
+
     title: {
         fontSize: 18,
         fontWeight: 'bold',
@@ -140,31 +142,31 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         backgroundColor: '#fff',
         marginTop: 10,
-        width: Dimensions.get('window').width/1.1,
+        width: Dimensions.get('window').width / 1.1,
         borderRadius: 12,
         marginLeft: 20
     },
-  
+
     menubtn: {
         flexDirection: 'row',
         alignItems: 'center',
         paddingVertical: 15,
         height: 70
     },
-  
-    name:{
+
+    name: {
         color: '#101811',
         width: '55%',
         // marginLeft: 10,
         fontSize: 18
     },
 
-    Detail:{
+    Detail: {
         color: '#9DA49E',
         // width: "50%",
         position: 'absolute',
         right: 50,
-        fontSize:16
+        fontSize: 16
     },
 
     cat1: {
@@ -174,7 +176,7 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height / 20,
         justifyContent: "center",
         borderRadius: 12,
-        position:'absolute',
+        position: 'absolute',
         left: 280
     },
 
@@ -185,34 +187,34 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
 
-    right :{
+    right: {
         width: 15,
         height: 15,
         // marginLeft: 10
-        position:'absolute',
+        position: 'absolute',
         right: 30
     },
 
     iconsleft: {
-        position:'absolute',
+        position: 'absolute',
         right: 0
     },
 
     icon1st: {
-        position:'absolute',
-        textAlign:"center",
+        position: 'absolute',
+        textAlign: "center",
         left: 20
     },
-    
+
     circle: {
-        position:'absolute',
+        position: 'absolute',
         right: 30
     },
 
     bsnsBTN: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent:'center'
+        justifyContent: 'center'
     },
 
     back1: {
@@ -243,7 +245,7 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         marginTop: 40
     },
-    
+
     // loginText: {
     //     color: '#fff',
     //     fontSize: 20,

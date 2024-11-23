@@ -9,12 +9,12 @@ const { width, height } = Dimensions.get("screen");
 export default function Notification() {
   return (
 
-    <>
-      <ScrollView style={styles.Container}>
+    <SafeAreaView style={styles.Container}>
+      <StatusBar style="auto" backgroundColor={"#fff"} />
+      <ScreenHeader title="Notifications" />
+      <ScrollView style={{ backgroundColor: "#f2f2f2" }}>
 
-        <StatusBar style="auto" backgroundColor={"#fff"} />
 
-        <ScreenHeader title="Notifications" />
         {/*........ Header ......... */}
 
 
@@ -76,14 +76,15 @@ export default function Notification() {
 
         </View>
       </ScrollView>
-    </>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
 
   Container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "#fff"
   },
   boxHead: {
     color: '#101811',

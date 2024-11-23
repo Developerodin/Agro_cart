@@ -8,6 +8,7 @@ import OrderDetails from '../Pages/OrderDetail';
 import Notification from '../Pages/Notification'
 import WishList from '../Pages/Wishlist';
 import HelpSupport from '../Pages/HelpSupport'
+import Profile from '../Pages/Profile';
 
 const Tab = createBottomTabNavigator();
 
@@ -72,7 +73,7 @@ export default function BottomNavigation() {
             <Tab.Screen name="Favorites" component={WishList} />
             <Tab.Screen name="Cart" component={Home} />
             <Tab.Screen name="Notifications" component={Notification} />
-            <Tab.Screen name="Profile" component={HelpSupport} />
+            <Tab.Screen name="Profile" component={Profile} />
         </Tab.Navigator>
     )
 }

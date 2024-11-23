@@ -17,6 +17,9 @@ export const Styles=StyleSheet.create({
     JustifyContent_center:{
         justifyContent:"center"
     },
+    JustifyContent_left:{
+        justifyContent:"flex-start"
+    },
     marginTop2:{
         marginTop:20
     },
@@ -29,5 +32,32 @@ export const Styles=StyleSheet.create({
     VerticalLine:{
         width:5,
         backgroundColor:"#fff"
+    },
+    marginBottom1:{
+        marginBottom:10
+    },
+    marginBottom2:{
+        marginBottom:20
+    },
+    marginBottom3:{
+        marginBottom:30
+    },
+    marginBottom4:{
+        marginBottom:40
+    },
+    marginBottom5:{
+        marginBottom:50
+    },
+    padding1:{
+        padding:10
+    },
+    padding2:{
+        padding:20
+    },
+    marginVertical1:{
+        marginVertical:10
+    },
+    marginVertical2:{
+        marginVertical:20
     }
 })

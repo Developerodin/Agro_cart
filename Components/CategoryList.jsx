@@ -9,6 +9,7 @@ const { width, height } = Dimensions.get("screen")
 export default function CategoryList() {
 
     const [SelectedItem, setSelectedItem] = useState(DummeyData[0])
+
     return (
         <View style={styles.Listcontainer}>
             <View style={[Styles.Row]}>
@@ -17,8 +18,8 @@ export default function CategoryList() {
                     keyExtractor={(item, index) => index.toString()}
                     renderItem={(item) => {
                         return (
-                            <TouchableOpacity style={styles.category_container} onPress={() => { setSelectedItem(item.item) }}>
-                                <View>
+                            <TouchableOpacity style={SelectedItem.categoryName==item.item.categoryName?[styles.category_container,styles.active]:styles.category_container} onPress={() => { setSelectedItem(item.item) }}>
+                                <View style={SelectedItem.categoryName==item.item.categoryName?{backgroundColor:"#1DAB451A",padding:5,borderRadius:10}:null}>
                                     <Image source={item.item.categoryImg} style={styles.stylescategoryImg} />
                                 </View>
 
@@ -77,5 +78,9 @@ const styles = StyleSheet.create({
         backgroundColor: "#E9F7ED",
         height: height,
         width: width / 1.4,
+    },
+    active:{
+        borderRightWidth:2,
+        borderRightColor:"#1DAB45"
     }
 })
